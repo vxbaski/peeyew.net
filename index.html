@@ -1,20 +1,59 @@
-    <title>peeyew-unLimited</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>peeyew-unLimited</title>
+  <style>
+    body {
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+    }
+    .feeling {
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      border: 2px solid #4285f4;
+      border-radius: 40px;
+      color: #4285f4;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+    .feeling:hover {
+      background: #4285f4;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="feeling" id="feeling">I'm Feeling...</div>
 
-      <style>
-          title {font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      color: cornflowerblue;}
-          body {background-color:#f9ec06;}
-      color: green;}
-          body {background-color:#f9ec06;}
-          h1{color: cornflowerblue;margin: 500px; font-family:'Times New Roman', Times, serif
-           ;font
- 
- @@ -16,8 +16,7 @@
-      </style>
-      <body>
-      <h1>
+  <script>
+    const feelings = [
+      "Lucky",
+      "Curious",
+      "Playful",
+      "Hungry",
+      "Adventurous",
+      "Doodly",
+      "Trendy",
+      "Generous",
+      "Puzzled",
+      "Artsie"
+    ];
 
-          peeyew.inc-----[direct message for commissions]
- 
-      </h1>
- 
+    function getRandomFeeling() {
+      const randomIndex = Math.floor(Math.random() * feelings.length);
+      return feelings[randomIndex];
+    }
+
+    window.onload = () => {
+      const feelingEl = document.getElementById("feeling");
+      feelingEl.textContent = "I'm Feeling " + getRandomFeeling();
+    };
+  </script>
+</body>
+</html>
