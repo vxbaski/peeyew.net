@@ -63,12 +63,12 @@
       margin-bottom: 10px;
     }
 
-    .image-gallery-images {
-      flex: 1;
+ .image-gallery-images {
+      flex: 1; /* Take up 50% of the gallery */
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-      grid-auto-flow: dense;
-      gap: 0;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive columns */
+      grid-auto-flow: dense; /* Fill gaps automatically */
+      gap: 2px; /* Tiny gap between rows and columns */
     }
 
     .image-gallery-images img {
