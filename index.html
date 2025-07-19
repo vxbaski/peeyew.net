@@ -30,50 +30,51 @@
     }
 
     .image-gallery {
-      display: flex; /* Use flexbox for layout */
-      height: 100vh; /* Full viewport height */
-      background: linear-gradient(to bottom, #7998ff 5%, #ffffff 60%); /* Blue to white gradient */
-      padding: 20px; /* Add padding around the gallery */
+      display: flex;
+      height: 100vh;
+      background: linear-gradient(to bottom, #7998ff 5%, #ffffff 60%);
+      padding: 20px;
+      flex-direction: row-reverse;
     }
 
     .contact-info {
-      flex: 1; /* Take up 50% of the gallery */
-      padding: 5px; /* Add padding inside the contact info */
+      flex: 1;
+      padding: 20px;
       display: flex;
       flex-direction: column;
-      justify-content: center; /* Center vertically */
-      align-items: center; /* Center horizontally */
+      justify-content: center;
+      align-items: center;
       box-sizing: border-box;
-      text-align: center; /* Center-align text */
+      text-align: center;
     }
 
     .contact-info h1 {
       margin: 0;
-      font-size: calc(2vw + 2vh); /* Dynamically scale font size based on viewport */
-      line-height: 1.2; /* Adjust line height for better spacing */
-      width: 100%; /* Ensure it spans the full width */
-      text-align: justify; /* Justify the text */
+      font-size: calc(2vw + 2vh);
+      line-height: 1.2;
+      width: 100%;
+      text-align: justify;
     }
 
     .contact-info a {
       text-decoration: none;
-      color: #0000ff; /* Blue links */
+      color: #0000ff;
       display: block;
       margin-bottom: 10px;
     }
 
     .image-gallery-images {
-      flex: 1; /* Take up 100% of the gallery */
+      flex: 1;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive columns */
-      grid-auto-flow: dense; /* Fill gaps automatically */
-      gap: 0; /* No gaps between images */
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      grid-auto-flow: dense;
+      gap: 0;
     }
 
     .image-gallery-images img {
-      width: 100%; /* Make images fill their grid cells */
-      height: auto; /* Maintain aspect ratio */
-      object-fit: cover; /* Ensure images fit within their cells */
+      width: 100%;
+      height: auto;
+      object-fit: cover;
     }
   </style>
 </head>
@@ -114,7 +115,7 @@
       "blueprint", "bathtub", "substitute", "paradise", "sandbox",
       "explicative", "example", "goalpost", "nomenclature", "staircase",
       "accessory", "bazaar", "satire", "mugshot", "soundtrack",
-      "homebase", "factory", "mechanism", "scheme", "decision"
+      "homebase", "factory", "mechanism", "scheme"
     ];
 
     function getRandomFeeling() {
