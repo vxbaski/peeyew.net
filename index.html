@@ -30,40 +30,41 @@
     }
 
     .image-gallery {
-      display: flex;
-      height: 100vh;
-      background: linear-gradient(to bottom, #7998ff 5%, #ffffff 60%);
-      padding: 20px;
-      flex-direction: row-reverse;
+      display: flex; /* Use flexbox for layout */
+      height: 100vh; /* Full viewport height */
+      background: linear-gradient(to bottom, #7998ff 5%, #ffffff 60%); /* Blue to white gradient */
+      padding: 20px; /* Add padding around the gallery */
+      flex-direction: row-reverse; /* Reverse the order of children to place contact-info on the right */
     }
 
     .contact-info {
-      flex: 1;
-      padding: 20px;
+      flex: 1; /* Take up 50% of the gallery */
+      padding: 20px; /* Add padding inside the contact info */
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      justify-content: center; /* Center vertically */
+      align-items: center; /* Center horizontally */
       box-sizing: border-box;
-      text-align: center;
+      text-align: center; /* Center-align text */
     }
 
     .contact-info h1 {
       margin: 0;
-      font-size: calc(2vw + 2vh);
-      line-height: 1.2;
-      width: 100%;
-      text-align: justify;
+      font-size: calc(2vw + 2vh); /* Dynamically scale font size based on viewport */
+      line-height: 1.2; /* Adjust line height for better spacing */
+      width: 100%; /* Ensure it spans the full width */
+      text-align: ; /* Justify the text */
     }
 
     .contact-info a {
       text-decoration: none;
-      color: #0000ff;
+      color: #0000ff; /* Blue links */
       display: block;
       margin-bottom: 10px;
+      
     }
 
- .image-gallery-images {
+    .image-gallery-images {
       flex: 1; /* Take up 50% of the gallery */
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive columns */
@@ -72,9 +73,9 @@
     }
 
     .image-gallery-images img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
+      width: 100%; /* Make images fill their grid cells */
+      height: auto; /* Maintain aspect ratio */
+      object-fit: cover; /* Ensure images fit within their cells */
     }
   </style>
 </head>
@@ -101,6 +102,16 @@
       <img src="https://d2w9rnfcy7mm78.cloudfront.net/38054234/original_d90d87c7cf0f0f2189f2ebcab126e61d.png?1752294451?bc=0" alt="Image 10">
       <img src="https://d2w9rnfcy7mm78.cloudfront.net/38054227/original_82c7d0cc6122e8c94698c5cda3474319.png?1752294385?bc=0" alt="Image 11">
       <img src="https://d2w9rnfcy7mm78.cloudfront.net/38054225/original_39b3cc60b3a3716afff1b1d86c92c908.png?1752294376?bc=0" alt="Image 12">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38052980/original_9068d6e82b0872bf3aa0df6e01f10f21.png?1752284706?bc=0" alt="Image 13">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38054204/original_d88586805816b201d18ed97affc5133a.png?1752294207?bc=0" alt="Image 14">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38054208/original_7d334c5902a377dd619301ecacb71aec.png?1752294239?bc=0" alt="Image 15">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38054210/original_875df9216bd913083c0c85167edabfe9.png?1752294290?bc=0" alt="Image 16">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38054211/original_d6d7d451178e0cf7751b8ef5a1e30b43.png?1752294296?bc=0" alt="Image 17">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38054216/original_8e24c028340fe34dc2b78537ec748385.png?1752294332?bc=0" alt="Image 18">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38054217/original_ba40cf193974288a8dc566aae724044d.png?1752294333?bc=0" alt="Image 19">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38054220/original_2d07ef1eb61565d07e7ac826cd7c3122.png?1752294341?bc=0" alt="Image 20">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38054221/original_cbcec5c66949a2651455fab2b1497f62.png?1752294346?bc=0" alt="Image 21">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38054223/original_0cf87b8477c4555e36ca6370d9a37707.png?1752294372?bc=0" alt="Image 22">
     </div>
   </section>
 
