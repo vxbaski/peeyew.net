@@ -2,64 +2,120 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>peeyew-unLimited</title>
-  <link rel="icon" type="image/x-icon" href="https://ibb.co/wZNgZjRB">
+  <link rel="icon" type="image/x-icon" href="https://d2w9rnfcy7mm78.cloudfront.net/38053847/original_3ab62c8655948ae8774217d453a34a7d.png?1752290935?bc=0">
   <style>
     body {
+      margin: 0;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .main {
       display: flex;
       height: 100vh;
+      width: 100vw;
       justify-content: center;
       align-items: center;
-      font-family: 'Times New Roman', Times, serif, ;
       background-image: url(https://d2w9rnfcy7mm78.cloudfront.net/37383449/original_5794ce320569de839326ea71b91f7ff2.png?1749694191?bc=0);
       background-repeat: repeat-x;
       background-position: bottom;
-      background-attachment: fixed;
+      background-attachment: scroll;
+      background-size: auto;
     }
+
     .feeling {
       font-size: 2rem;
       color: #0000ff;
-      transition: blur 2px;
-      
+    }
+
+    .image-gallery {
+      display: flex; /* Use flexbox for layout */
+      height: 100vh; /* Full viewport height */
+      background: linear-gradient(to bottom, #7998ff 5%, #ffffff 60%); /* Blue to white gradient */
+      padding: 20px; /* Add padding around the gallery */
+    }
+
+    .contact-info {
+      flex: 1; /* Take up 50% of the gallery */
+      padding: 5px; /* Add padding inside the contact info */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Center vertically */
+      align-items: center; /* Center horizontally */
+      box-sizing: border-box;
+      text-align: center; /* Center-align text */
+    }
+
+    .contact-info h1 {
+      margin: 0;
+      font-size: calc(2vw + 2vh); /* Dynamically scale font size based on viewport */
+      line-height: 1.2; /* Adjust line height for better spacing */
+      width: 100%; /* Ensure it spans the full width */
+      text-align: justify; /* Justify the text */
+    }
+
+    .contact-info a {
+      text-decoration: none;
+      color: #0000ff; /* Blue links */
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .image-gallery-images {
+      flex: 1; /* Take up 100% of the gallery */
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive columns */
+      grid-auto-flow: dense; /* Fill gaps automatically */
+      gap: 0; /* No gaps between images */
+    }
+
+    .image-gallery-images img {
+      width: 100%; /* Make images fill their grid cells */
+      height: auto; /* Maintain aspect ratio */
+      object-fit: cover; /* Ensure images fit within their cells */
     }
   </style>
 </head>
+
 <body>
-  <div class="feeling" id="feeling">peeyew is a digital design</div>
+  <section id="contact" class="image-gallery">
+    <div class="contact-info">
+      <h1>
+        <a href="mailto:845@peeyew.net">845@peeyew.net</a>
+        <a href="https://instagram.com/peeyew.inc">@peeyew.inc</a>
+        <a href="https://peeyew.net">peeyew.net</a>
+      </h1>
+    </div>
+    <div class="image-gallery-images">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38052985/original_14625650fe4b2d228c091f55b6d713da.png?1752284731?bc=0" alt="Image 1">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38052995/original_5b148c24649a3b034096fbd35f47c618.png?1752284782?bc=0" alt="Image 2">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38052984/original_0fe086da3ff37672d9e340b4423b6533.png?1752284713?bc=0" alt="Image 3">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38052993/original_69cca15cc8024198b61deacacf9d07d4.png?1752284775?bc=0" alt="Image 4">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38052983/original_268cabc89a80a700c32b9460067342ef.png?1752284711?bc=0" alt="Image 5">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38052986/original_f36d53a8db595b6a226edeb2d010981d.png?1752284739?bc=0" alt="Image 6">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38054272/original_0f3d4778bb7d27aca4a24ba2972c47f3.jpg?1752294618?bc=0" alt="Image 7">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38054265/original_7be454c77ef80a0522006b4899fe0086.jpg?1752294597?bc=0" alt="Image 8">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38054237/original_5a574c0482dbfc8eacc905932c8bca8d.png?1752294467?bc=0" alt="Image 9">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38054234/original_d90d87c7cf0f0f2189f2ebcab126e61d.png?1752294451?bc=0" alt="Image 10">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38054227/original_82c7d0cc6122e8c94698c5cda3474319.png?1752294385?bc=0" alt="Image 11">
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/38054225/original_39b3cc60b3a3716afff1b1d86c92c908.png?1752294376?bc=0" alt="Image 12">
+    </div>
+  </section>
+
+  <section id="main" class="main">
+    <div class="feeling" id="feeling">peeyew is a digital design</div>
+  </section>
 
   <script>
     const feelings = [
-      "calibration",
-      "dissertation",
-      "situation",
-      "thing",
-      "conundrum",
-      "casuality",
-      "something",
-      "desert",
-      "warehouse",
-      "mindhive",
-      "blueprint",
-      "bathtub",
-      "substitute",
-      "paradise",
-      "sandbox",
-      "explicative",
-      "example",
-      "goalpost",
-      "nomenclature",
-      "staircase",
-      "accessory",
-      "bazaar",
-      "satire",
-      "mugshot",
-      "soundtrack",
-      "homebase",
-      "factory",
-      "mechanism",
-      "scheme",
-      ];
+      "calibration", "dissertation", "situation", "thing", "conundrum",
+      "casuality", "something", "desert", "warehouse", "mindhive",
+      "blueprint", "bathtub", "substitute", "paradise", "sandbox",
+      "explicative", "example", "goalpost", "nomenclature", "staircase",
+      "accessory", "bazaar", "satire", "mugshot", "soundtrack",
+      "homebase", "factory", "mechanism", "scheme"
+    ];
 
     function getRandomFeeling() {
       const randomIndex = Math.floor(Math.random() * feelings.length);
@@ -69,8 +125,8 @@
     window.onload = () => {
       const feelingEl = document.getElementById("feeling");
       feelingEl.textContent = "peeyew is a digital design " + getRandomFeeling();
+      document.getElementById("main").scrollIntoView({ behavior: "instant" });
     };
   </script>
 </body>
 </html>
-
