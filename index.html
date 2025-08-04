@@ -1,84 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>peeyew-unLimited</title>
   <link rel="icon" type="image/x-icon" href="https://d2w9rnfcy7mm78.cloudfront.net/38053847/original_3ab62c8655948ae8774217d453a34a7d.png?1752290935?bc=0">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Times New Roman', Times, serif;
-    }
-
-    .main {
-      display: flex;
-      height: 100vh;
-      width: 100vw;
-      justify-content: center;
-      align-items: center;
-      background-image: url(https://d2w9rnfcy7mm78.cloudfront.net/37383449/original_5794ce320569de839326ea71b91f7ff2.png?1749694191?bc=0);
-      background-repeat: repeat-x;
-      background-position: bottom;
-      background-attachment: scroll;
-      background-size: auto;
-    }
-
-    .feeling {
-      font-size: 2rem;
-      color: #0000ff;
-    }
-
-    .image-gallery {
-      display: flex; /* Use flexbox for layout */
-      height: 100vh; /* Full viewport height */
-      background: linear-gradient(to bottom, #7998ff 5%, #ffffff 60%); /* Blue to white gradient */
-      padding: 20px; /* Add padding around the gallery */
-      flex-direction: row-reverse; /* Reverse the order of children to place contact-info on the right */
-    }
-
-    .contact-info {
-      flex: 1; /* Take up 50% of the gallery */
-      padding: 20px; /* Add padding inside the contact info */
-      display: flex;
-      flex-direction: column;
-      justify-content: center; /* Center vertically */
-      align-items: center; /* Center horizontally */
-      box-sizing: border-box;
-      text-align: center; /* Center-align text */
-    }
-
-    .contact-info h1 {
-      margin: 0;
-      font-size: calc(2vw + 2vh); /* Dynamically scale font size based on viewport */
-      line-height: 1.2; /* Adjust line height for better spacing */
-      width: 100%; /* Ensure it spans the full width */
-      text-align: ; /* Justify the text */
-    }
-
-    .contact-info a {
-      text-decoration: none;
-      color: #0000ff; /* Blue links */
-      display: block;
-      margin-bottom: 10px;
-      
-    }
-
-    .image-gallery-images {
-      flex: 1; /* Take up 50% of the gallery */
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive columns */
-      grid-auto-flow: dense; /* Fill gaps automatically */
-      gap: 2px; /* Tiny gap between rows and columns */
-    }
-
-    .image-gallery-images img {
-      width: 100%; /* Make images fill their grid cells */
-      height: auto; /* Maintain aspect ratio */
-      object-fit: cover; /* Ensure images fit within their cells */
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
+ <!-- HEADER -->
+<header>
+<div id="ninesixty">
+    <h1 id="home_link">HOME</h1>
+    <h1 id="projects_link">PROJECTS</h1>
+    <img id="logo" src="images/logo.png" alt="Logo">
+    <h1 id="services_link">SERVICES</h1>
+    <h1 id="contact_link">CONTACT</h1>
+</div>
+</header>
+
+ <!-- CONTACT -->
 
 <body>
   <section id="contact" class="image-gallery">
@@ -116,7 +58,9 @@
   </section>
 
   <section id="main" class="main">
-    <div class="feeling" id="feeling">peeyew is a digital design</div>
+    <div class="feeling" id="feeling">
+      peeyew is a digital design
+    </div>
   </section>
 
   <script>
@@ -130,13 +74,13 @@
     ];
 
     function getRandomFeeling() {
-      const randomIndex = Math.floor(Math.random() * feelings.length);
-      return feelings[randomIndex];
+      const idx = Math.floor(Math.random() * feelings.length);
+      return feelings[idx];
     }
 
     window.onload = () => {
-      const feelingEl = document.getElementById("feeling");
-      feelingEl.textContent = "peeyew is a digital design " + getRandomFeeling();
+      const el = document.getElementById("feeling");
+      el.textContent = "peeyew is a digital design " + getRandomFeeling();
       document.getElementById("main").scrollIntoView({ behavior: "instant" });
     };
   </script>

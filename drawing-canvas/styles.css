@@ -1,0 +1,115 @@
+/* styles.css */
+
+/* general page & layout */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  margin: 20px;
+}
+h2 {
+  margin-bottom: 20px;
+}
+#main {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* PALETTE: 2×4 grid, single black border */
+#palette-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 48px);
+  grid-template-rows: repeat(4, 48px);
+  border: 2px solid black;
+  margin-bottom: 8px;
+}
+.swatch {
+  width: 48px;
+  height: 48px;
+  background: var(--swatch-color);
+  cursor: pointer;
+  margin: 0;
+  /* clear out any old outline */
+  outline: none;
+}
+.swatch.selected {
+  /* use box-shadow instead of outline */
+  box-shadow: 0 0 0 3px red;
+}
+
+/* BUTTONS: 2×1 grid below palette */
+#buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 48px);
+  grid-template-rows: 48px;
+  gap: 8px;
+}
+.swatch-btn {
+  width: 48px;
+  height: 48px;
+  background: #ddd;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.swatch-btn:hover {
+  background: #ccc;
+}
+
+/* SETTINGS PANEL */
+.settings-container {
+  position: relative;
+}
+#settings-panel {
+  position: absolute;
+  top: 0;
+  left: -140px;       /* pops out to left */
+  width: 120px;
+  background: #ececec;
+  padding: 8px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.hidden {
+  display: none;
+}
+
+/* Make the slider horizontal again! */
+#settings-panel input[type="range"] {
+  transform: none;
+  width: 100px;
+}
+
+/* Eraser / undo / redo inside panel */
+#settings-panel button {
+  width: 48px;
+  height: 48px;
+  background: #ddd;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+#settings-panel button:hover {
+  background: #ccc;
+}
+
+/* CANVAS */
+#canvas-container {
+  border: 1px solid #333;
+  background: #f7f7f7;
+  touch-action: none;
+  margin-left: 24px;
+}
+#drawing-canvas {
+  display: block;
+  cursor: crosshair;
+}
