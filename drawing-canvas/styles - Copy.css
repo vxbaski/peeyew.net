@@ -1,0 +1,86 @@
+/* Page background transparent */
+body {
+  margin: 20px;                  /* keep your spacing */
+  font-family: sans-serif;
+  background: transparent;       /* key change */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Keep your layout */
+#main {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Palette + buttons = floating (no container bg) */
+#palette-grid,
+#buttons-grid,
+.settings-container,
+#settings-panel {
+  background: transparent;       /* no block backgrounds */
+}
+
+/* Optional: keep the settings popup panel neutral, not tinted */
+#settings-panel {
+  background: rgba(236,236,236,0.95); /* slight card feel; set to transparent if you prefer */
+}
+
+/* The CANVAS “paper” — solid white, with subtle elevation */
+#canvas-container {
+  background: transparent;       /* remove the gray fill */
+  border: none;                  /* no big box around it */
+  margin-left: 24px;
+  touch-action: none;
+}
+
+#drawing-canvas {
+  display: block;
+  background: #ffffff;           /* solid white sheet */
+  border: 1px solid #333;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);  /* floating effect */
+  cursor: crosshair;
+}
+
+
+
+/* PALETTE GRID: single black border, shrink-wrap, positioned for overlay */
+#palette-grid {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 48px);
+  grid-template-rows: repeat(4, 48px);
+  gap: 0;                      /* swatches touch */
+  border: 2px solid #000;      /* single outer border */
+  padding: 0;
+  margin: 0;
+  position: relative;          /* so the indicator can be absolutely positioned inside */
+}
+
+/* Each color square */
+.swatch {
+  width: 48px;
+  height: 48px;
+  background: var(--swatch-color); /* or set via JS backgroundColor */
+  position: relative;
+  cursor: pointer;
+}
+
+/* kill any old selection styles (outline/box-shadow/pseudo-elements) */
+.swatch.selected { outline: none; box-shadow: none; }
+
+/* The red horizontal tick that we MOVE around */
+#palette-indicator {
+  position: absolute;
+  width: 40%;                  /* short line, not full width */
+  height: 87px;                 /* thickness */
+  background: #ff0000;         /* red tick */
+  /* border-radius: 2px; 	    rounded ends */
+  pointer-events: none;
+  z-index: 2;                  /* over swatches & border */
+  display: none;               /* hidden until we place it */
+}
+
+/* Utility used by JS */
+.hidden { display: none; }
